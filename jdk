@@ -1,0 +1,19 @@
+新建一个jdk的安装目录，我这里是在/usr/local/下新建了Java目录，命令:mkdir /usr/local/java ，再把 jdk-7u75-linux-x64.tar.gz压缩包从opt目录下复制到/usr/local/java目录下，命令如下：
+[plain] view plain copy
+cp jdk-7u75-linux-x64.tar.gz /usr/local/java  
+
+
+五：解压缩刚才下载的： jdk-7u75-linux-x64.tar.gz包，命令如下：
+[plain] view plain copy 在CODE上查看代码片派生到我的代码片
+tar xvf  jdk-7u75-linux-x64.tar.gz  
+
+六：解压完成后，进入到：
+[plain] view plain copy 在CODE上查看代码片派生到我的代码片
+[root@localhost~]# cd /etc  
+[root@localhost etc]# vi profile  
+在profile文件的末尾加入如下命令：
+[plain] view plain copy 在CODE上查看代码片派生到我的代码片
+export JAVA_HOME=/usr/local/java/jdk1.7.0_75  
+export JRE_HOME=/usr/local/java/jdk1.7.0_75/jre  
+export PATH=$PATH:/usr/local/java/jdk1.7.0_75/bin  
+export CLASSPATH=./:/usr/local/java/jdk1.7.0_75/lib:/usr/local/java/jdk1.7.0_75/jre/lib  
